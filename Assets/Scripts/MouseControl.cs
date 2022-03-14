@@ -25,7 +25,7 @@ public class MouseControl : MonoBehaviour
         if (characterBody)
             targetCharacterDirection = characterBody.transform.localRotation.eulerAngles;
     }
-    //check
+    
     void Update()
     {
         // Ensure the cursor is always locked when set
