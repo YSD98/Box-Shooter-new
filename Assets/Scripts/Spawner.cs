@@ -22,7 +22,6 @@ public class Spawner : MonoBehaviour
 			// determine the next time to spawn the object
 			nextSpawnTime = Time.time+secondsBetweenSpawning;
             Tm.transform.parent = gameObject.transform;
-            Destroy(Tm,1f);
 		}
     }
 }
