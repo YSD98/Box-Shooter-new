@@ -1,5 +1,5 @@
 using UnityEngine;
-public class Shooter : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     Rigidbody rg;
     void Start()

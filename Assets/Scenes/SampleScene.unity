@@ -346,7 +346,6 @@ GameObject:
   - component: {fileID: 414455494}
   - component: {fileID: 414455496}
   - component: {fileID: 414455495}
-  - component: {fileID: 414455497}
   m_Layer: 0
   m_Name: FPS
   m_TagString: Untagged
@@ -420,20 +419,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &414455497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414455493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0977d3d040b71f6449e357b7a501ad92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 1309443116215379714, guid: 20cfd65475848eb4e9b89a31243dcd2f, type: 3}
-  Cam: {fileID: 414455493}
 --- !u!1 &507714539
 GameObject:
   m_ObjectHideFlags: 0
