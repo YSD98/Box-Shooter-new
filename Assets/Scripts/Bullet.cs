@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         rg.AddForce(transform.forward * 50.0f, ForceMode.VelocityChange);
+        Destroy(gameObject,1f);
     }
     void OnCollisionEnter(Collision other)
     {
