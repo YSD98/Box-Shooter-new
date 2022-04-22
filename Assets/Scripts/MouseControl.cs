@@ -13,8 +13,8 @@ public class MouseControl : MonoBehaviour
         rotationY +=  Input.GetAxis("Mouse X");
         rotationX -=  Input.GetAxis("Mouse Y");
 
-        rotationX = Mathf.Clamp(rotationX, -30f, 0f);
-        rotationY = Mathf.Clamp(rotationY, -20f, 20f);
+        rotationX = Mathf.Clamp(rotationX, -30f, 30f);
+        rotationY = Mathf.Clamp(rotationY, -40f, 40f);
 
         transform.eulerAngles = new Vector3(rotationX, rotationY, 0);
     }

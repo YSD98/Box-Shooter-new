@@ -11,9 +11,9 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         Vector3 pos ;
-        pos.x = Random.Range(-10,10);
-        pos.y = Random.Range(2,10);
-        pos.z = Random.Range(5,10);
+        pos.x = Random.Range(-5,5);
+        pos.y = Random.Range(2,5);
+        pos.z = 10;
         if (Time.time  >= nextSpawnTime) {
 			// Spawn the game object through function below
             int objectToSpawn = Random.Range (0, spawnerr.Length);
