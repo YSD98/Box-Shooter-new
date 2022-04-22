@@ -1,14 +1,21 @@
 using UnityEngine;
 public class MouseControl : MonoBehaviour
 {
-    public GameObject Cam;
-    void Start ()
+    private float rotationX = 0.0f, rotationY = 0.0f;
+    void Start()
     {
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
-        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X"));
-        Cam.transform.Rotate(Vector3.left * Input.GetAxis("Mouse Y"));
+        
+        rotationY +=  Input.GetAxis("Mouse X");
+        rotationX -=  Input.GetAxis("Mouse Y");
+
+        rotationX = Mathf.Clamp(rotationX, -30f, 0f);
+        rotationY = Mathf.Clamp(rotationY, -20f, 20f);
+
+        transform.eulerAngles = new Vector3(rotationX, rotationY, 0);
     }
 }
