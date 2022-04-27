@@ -2,18 +2,22 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] spawnerr;
+    void Start()
+    {
+        InvokeRepeating("Spawn",.5f,1f);
+    }
     void Update()
+    {
+
+    }
+    void Spawn()
     {
         Vector3 pos;
         pos.x = Random.Range(-5,5);
-        pos.y = -5;
+        pos.y = -10;
         pos.z = 10;
-        int objectToSpawn = Random.Range (0, spawnerr.Length);
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            GameObject inst = Instantiate(spawnerr[objectToSpawn],pos,transform.rotation) as GameObject;
-            inst.transform.Translate(Vector3.forward);
-            // inst.transform.parent = gameObject.transform;
-        }
+        int objj = Random.Range(0,spawnerr.Length);
+        GameObject obj = Instantiate(spawnerr[objj],pos,Quaternion.identity) as GameObject;
+        obj.transform.Translate(Vector3.forward);
     }
 }
