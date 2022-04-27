@@ -5,6 +5,11 @@ public class Shooter : MonoBehaviour
     public AudioClip shootSFX;
     public GameObject projectile;
 	public float power = 10.0f;
+	GameObject newObj;
+	void Start()
+	{
+		newObj = new GameObject("BulletParent");
+	}
     void Update()
     {
         if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
@@ -21,7 +26,10 @@ public class Shooter : MonoBehaviour
 				}
 				// Apply force to the newProjectile's Rigidbody component if it has one
 				newProjectile.GetComponent<Rigidbody>().AddForce(transform.forward * power, ForceMode.VelocityChange);
-				newProjectile.transform.parent = gameObject.transform;
+				
+				Destroy(newProjectile,2f);
+				
+				newProjectile.transform.parent = newObj.transform;
 
                 if (shootSFX)
 				{
