@@ -21,6 +21,7 @@ public class Shooter : MonoBehaviour
 				}
 				// Apply force to the newProjectile's Rigidbody component if it has one
 				newProjectile.GetComponent<Rigidbody>().AddForce(transform.forward * power, ForceMode.VelocityChange);
+				newProjectile.transform.parent = gameObject.transform;
 
                 if (shootSFX)
 				{
