@@ -2,14 +2,9 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
+    [SerializeField]private float _TimeToDestroy = 5f;
     void Update()
     {
-        transform.Translate(new Vector3(0,0,-0.05f));
-        Destroy(gameObject,5f);
-    }
-    void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.tag == "Bullet")
-            Destroy(gameObject);
+        Destroy(gameObject,_TimeToDestroy);
     }
 }

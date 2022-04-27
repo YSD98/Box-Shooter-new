@@ -1,5 +1,5 @@
 using UnityEngine;
-public class MouseControl : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     private float rotationX = 30f, rotationY = 0.0f;
     void Start()
