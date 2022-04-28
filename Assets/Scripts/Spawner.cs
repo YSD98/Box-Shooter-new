@@ -6,18 +6,14 @@ public class Spawner : MonoBehaviour
     {
         InvokeRepeating("Spawn",.5f,1f);
     }
-    void Update()
-    {
-
-    }
     void Spawn()
     {
         Vector3 pos;
         pos.x = Random.Range(-5,5);
-        pos.y = -10;
+        pos.y = -5;
         pos.z = 10;
         int objj = Random.Range(0,spawnerr.Length);
-        GameObject obj = Instantiate(spawnerr[objj],pos,Quaternion.identity) as GameObject;
-        obj.transform.Translate(Vector3.forward);
+        GameObject obj = Instantiate(spawnerr[objj],pos,Quaternion.identity);
+        obj.transform.parent = gameObject.transform;
     }
 }
