@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public class BulletShooter : MonoBehaviour
 {
     public AudioClip shootSFX;
     public GameObject projectile;
