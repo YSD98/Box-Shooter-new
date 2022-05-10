@@ -12,9 +12,9 @@ public class Spawner : MonoBehaviour
         pos.x = Random.Range(-5,5);
         pos.y = 0;
         pos.z = 10;
-        int objj = Random.Range(0,spawnerr.Length);
+        int objj = Random.Range(0,spawnerr.Length+1);
         GameObject obj = Instantiate(spawnerr[objj],pos,Quaternion.identity);
         obj.transform.parent = gameObject.transform;
-        Debug.Log(pos.x);
+        Debug.Log(objj);
     }
 }
