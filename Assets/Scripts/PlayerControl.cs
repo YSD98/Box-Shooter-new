@@ -1,7 +1,7 @@
 using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
-    private float rotationX = 30f, rotationY = 0.0f;
+    private float rotationX = 0f, rotationY = 0.0f;
     void Start()
     {
         Cursor.visible = false;
